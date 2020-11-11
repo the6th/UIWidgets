@@ -120,8 +120,8 @@ namespace Unity.UIWidgets.async {
                     if (flushMicroTasks != null) {
                         flushMicroTasks();
                     }
-
-                    timer.invoke();
+                    //comment out for Unity 2019.3 over ,it is very slow.
+                    // timer.invoke();
                     if (timer.periodic && !timer.done) {
                         _appendList.Add(timer);
                     }
